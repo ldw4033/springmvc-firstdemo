@@ -15,8 +15,24 @@ public class User implements Serializable {
     private String username;
 
     private String password;
+    
+    private Dept dept;
 
-    public long getId() {
+    /**
+	 * @return dept
+	 */
+	public Dept getDept() {
+		return dept;
+	}
+
+	/**
+	 * @param dept 要设置的 dept 
+	 */
+	public void setDept(Dept dept) {
+		this.dept = dept;
+	}
+
+	public long getId() {
         return id;
     }
 
@@ -40,11 +56,18 @@ public class User implements Serializable {
         this.password = password;
     }
 
+	/* (非 Javadoc) 
+	 * <p>Title: toString</p> 
+	 * <p>Description: </p> 
+	 * @return 
+	 * @see java.lang.Object#toString() 
+	 */
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password="
-				+ password + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", dept=" + dept + "]";
 	}
+
+
     
     
     

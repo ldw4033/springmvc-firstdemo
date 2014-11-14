@@ -18,8 +18,8 @@ public class LoginController {
 		log.info("LoginUI");
 		return "loginUI";
 	}
+
 	@RequestMapping(value="/login",method=RequestMethod.POST)
-	
 	public @ResponseBody User login(@ModelAttribute(value="user") User user){
 		log.info(user.toString());
 		return user;
